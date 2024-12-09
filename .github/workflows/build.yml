@@ -10,10 +10,10 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.11'
         architecture: 'x64'
@@ -28,7 +28,7 @@ jobs:
         pyinstaller MaintenanceApp.spec
         
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: MaintenanceApp-Windows
         path: dist/MaintenanceApp.exe 
